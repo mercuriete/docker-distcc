@@ -5,4 +5,4 @@ else
     net=$NETWORK
 fi
 
-distccd --allow=$net --daemon --verbose --no-detach $append_params
+distccd --allow=$net --daemon --verbose --no-detach

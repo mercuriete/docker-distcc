@@ -9,4 +9,4 @@ ADD entrypoint.sh .
 
 EXPOSE 3632
 
-ENTRYPOINT "/entrypoint.sh"
+ENTRYPOINT "./entrypoint.sh"
