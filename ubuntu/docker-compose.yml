@@ -3,7 +3,7 @@ version: '3'
 services:
 
   distcc:
-    build: ubuntu
+    build: .
     environment:
       - NETWORK=192.168.1.0/24
     ports:
