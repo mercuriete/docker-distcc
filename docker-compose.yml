@@ -1,9 +1,11 @@
-distcc:
-    container_name: distcc-server
-    image: choldrim/distcc
-    environment: 
-        - NETWORK=10.0.0.1/16
-        - JOBS=3
+version: '3'
+
+services:
+
+  distcc:
+    build: .
+    environment:
+      - NETWORK=192.168.1.0/24
     ports:
-        - 3632:3632
-    user: distccd
+      - 3632:3632
+
