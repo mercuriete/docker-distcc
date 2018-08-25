@@ -1,4 +1,4 @@
-FROM ubuntu
+FROM ubuntu:14.04
 
 ENV NETWORK "192.168.1.0/24"
 

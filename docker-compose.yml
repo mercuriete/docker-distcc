@@ -1,10 +1,18 @@
-version: '3'
+version: '3.3'
 
 services:
 
   distcc:
-    build: ubuntu
+    image: mercuriete/distcc
     environment:
       - NETWORK=192.168.1.0/24
+    #bypass routing mesh to avoid load balancing
     ports:
-      - 3632:3632
+      - target: 3632
+        published: 3632
+        protocol: tcp
+        mode: host
+    #Only one instance per node
+    deploy:
+      mode: global
+
