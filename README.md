@@ -31,6 +31,7 @@ The prerequisites is have at least one node of docker swarm. See [documentation]
 1. Clone repository and deploy stack
 ```shell  
 git clone https://github.com/mercuriete/docker-distcc.git && \
+cd docker-distcc && \
 docker stack deploy --compose-file=docker-compose.yml distcc
 ```
 * Remember to change the NETWORK environmental variable in the docker-compose.yml according your networking ip configuration. This is important to allow the server to accept connection from clients. By default is 192.168.1.0/24.
